@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Boutique de parfums en ligne avec paiement Wave et Orange Money.">
+  <title>Essence Royale - Parfumerie en ligne</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="Essence Royale, accueil">ESSENCE <span>ROYALE</span></a>
+    <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav aria-label="Navigation principale"><a href="#parfums">Parfums</a><a href="#avantages">Nos engagements</a><a href="#contact">Contact</a></nav>
+    <button class="cart-button" type="button" aria-label="Ouvrir le panier">Panier <span id="cart-count">0</span></button>
+  </header>
+  <main>
+    <section class="hero" id="accueil"><div class="hero-copy"><p class="eyebrow">PARFUMERIE D'EXCEPTION</p><h1>Votre signature.<br><em>Votre parfum.</em></h1><p>Découvrez une sélection raffinée de fragrances pour femme, homme et unisexes, livrées avec soin.</p><a class="primary" href="#parfums">Découvrir la collection</a></div><div class="bottle-art" aria-label="Flacon de parfum décoratif"><div class="cap"></div><div class="bottle"><span>ER</span><small>EAU DE PARFUM</small></div></div></section>
+    <section class="benefits" id="avantages"><article><strong>✓ Produits authentiques</strong><span>Une sélection contrôlée avec soin.</span></article><article><strong>🚚 Livraison rapide</strong><span>Expédition sécurisée et suivi de commande.</span></article><article><strong>🔒 Paiement sécurisé</strong><span>Wave et Orange Money disponibles.</span></article></section>
+    <section class="shop" id="parfums"><div class="section-head"><div><p class="eyebrow">NOTRE SÉLECTION</p><h2>Parfums d'exception</h2></div><div class="filters" aria-label="Filtres produits"><button class="filter active" data-filter="all">Tous</button><button class="filter" data-filter="femme">Femme</button><button class="filter" data-filter="homme">Homme</button><button class="filter" data-filter="unisexe">Unisexe</button></div></div><div class="products" id="product-list"></div></section>
+    <section class="newsletter" id="contact"><p class="eyebrow">LE CERCLE ESSENCE</p><h2>Recevez nos nouveautés</h2><p>Offres privées, conseils olfactifs et nouvelles fragrances.</p><form id="newsletter-form"><input type="email" aria-label="Adresse e-mail" placeholder="Votre adresse e-mail" required><button type="submit">S'inscrire</button></form><p class="form-message" id="newsletter-message" role="status"></p></section>
+  </main>
+  <footer><div class="brand">ESSENCE <span>ROYALE</span></div><p>Parfums choisis avec exigence, servis avec élégance.</p><p>© 2026 Essence Royale</p></footer>
+  <aside class="drawer" id="cart" aria-hidden="true" aria-label="Panier"><div class="drawer-head"><h2>Votre panier</h2><button class="close" type="button" aria-label="Fermer">×</button></div><div id="cart-items" class="cart-items"></div><div class="empty" id="empty-cart">Votre panier est vide.</div><div class="cart-summary"><div><span>Total</span><strong id="total">0 FCFA</strong></div><button class="primary checkout-button" type="button">Passer au paiement</button></div></aside><div class="overlay" id="overlay"></div>
+  <dialog id="checkout"><button class="dialog-close" type="button" aria-label="Fermer">×</button><p class="eyebrow">PAIEMENT SÉCURISÉ</p><h2>Finaliser la commande</h2><form id="checkout-form"><label>Nom complet<input name="name" autocomplete="name" required></label><label>Téléphone<input name="phone" type="tel" autocomplete="tel" placeholder="Ex. 07 00 00 00 00" required></label><label>Adresse de livraison<textarea name="address" required></textarea></label><fieldset><legend>Moyen de paiement</legend><label class="payment"><input type="radio" name="payment" value="Wave" checked><span class="wave">W</span><strong>Wave</strong></label><label class="payment"><input type="radio" name="payment" value="Orange Money"><span class="orange">OM</span><strong>Orange Money</strong></label></fieldset><div class="checkout-total"><span>Montant à payer</span><strong id="checkout-total">0 FCFA</strong></div><button class="primary" type="submit">Confirmer la commande</button><small>Prototype : aucun paiement réel n'est débité.</small></form><div class="success" id="success" hidden><div>✓</div><h2>Commande enregistrée</h2><p id="success-text"></p><button class="primary done" type="button">Continuer mes achats</button></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
